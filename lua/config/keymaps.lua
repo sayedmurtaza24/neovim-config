@@ -51,3 +51,7 @@ end, { desc = "Toggle Terminal" })
 -- telescope
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find Files" })
 vim.keymap.set("n", "<leader>fw", "<cmd>Telescope live_grep<cr>", { desc = "Find Files" })
+
+-- cursor while typing
+vim.keymap.set("i", "<C-h>", "<Left>", { desc = "Cursor Left" })
+vim.keymap.set("i", "<C-l>", "<Right>", { desc = "Cursor Right" })
