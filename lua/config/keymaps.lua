@@ -38,7 +38,7 @@ vim.keymap.set({ "n", "v" }, "<leader>ca", "<cmd>Telescope quickfix<cr>", { desc
 
 -- lsp
 vim.keymap.set({ "n", "v" }, "gi", "<cmd>Telescope lsp_implementations<cr>", { desc = "LSP Implementations" })
-vim.keymap.set({ "n", "v" }, "gr", vim.lsp.buf.rename, { desc = "Rename" })
+vim.keymap.set({ "n", "v" }, "<leader>ra", vim.lsp.buf.rename, { desc = "Rename" })
 
 -- navbuddy
 vim.keymap.set("n", "<leader>nv", "<cmd>Navbuddy<cr>", { desc = "Navbuddy" })
@@ -47,10 +47,6 @@ vim.keymap.set("n", "<leader>nv", "<cmd>Navbuddy<cr>", { desc = "Navbuddy" })
 vim.keymap.set({ "n", "t" }, "<C-b>", function()
   vim.cmd("ToggleTerm direction=float")
 end, { desc = "Toggle Terminal" })
-
--- telescope
-vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find Files" })
-vim.keymap.set("n", "<leader>fw", "<cmd>Telescope live_grep<cr>", { desc = "Find Files" })
 
 -- cursor while typing
 vim.keymap.set("i", "<C-h>", "<Left>", { desc = "Cursor Left" })

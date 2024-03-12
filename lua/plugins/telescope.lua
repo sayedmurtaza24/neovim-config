@@ -1,7 +1,8 @@
 return {
   "nvim-telescope/telescope.nvim",
   keys = {
-    -- change a keymap
+    { "<leader>/", false },
     { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
+    { "<leader>fw", "<cmd>Telescope live_grep<cr>", desc = "Live Grep" },
   },
 }

@@ -52,8 +52,8 @@ return {
 
   {
     "VidocqH/lsp-lens.nvim",
+    enabled = false,
     opts = {
-      enable = true,
       include_declaration = false,
       sections = {
         definition = true,
@@ -149,17 +149,6 @@ return {
           guifg = "#333333",
         },
       },
-    },
-  },
-
-  {
-    "telescope.nvim",
-    dependencies = {
-      "nvim-telescope/telescope-fzf-native.nvim",
-      build = "make",
-      config = function()
-        require("telescope").load_extension("fzf")
-      end,
     },
   },
 
