@@ -105,6 +105,7 @@ return {
   },
 
   -- imports
+  { import = "lazyvim.plugins.extras.coding.codeium" },
   { import = "lazyvim.plugins.extras.lang.typescript" },
   { import = "lazyvim.plugins.extras.lang.json" },
   { import = "lazyvim.plugins.extras.lang.go" },
@@ -117,7 +118,7 @@ return {
   { import = "lazyvim.plugins.extras.linting.eslint" },
   { import = "lazyvim.plugins.extras.formatting.prettier" },
 
-  { "ziglang/zig.vim" },
+  { "ziglang/zig.vim", lazy = true },
 
   {
     "echasnovski/mini.comment",
@@ -186,10 +187,9 @@ return {
     },
   },
 
-  { "tiagovla/scope.nvim", lazy = false },
-
   {
     "tpope/vim-dadbod",
+    lazy = true,
   },
 
   {
@@ -201,20 +201,19 @@ return {
   },
 
   {
-    "christoomey/vim-tmux-navigator",
+    "knubie/vim-kitty-navigator",
     cmd = {
-      "TmuxNavigateLeft",
-      "TmuxNavigateDown",
-      "TmuxNavigateUp",
-      "TmuxNavigateRight",
-      "TmuxNavigatePrevious",
+      "KittyNavigateLeft",
+      "KittyNavigateDown",
+      "KittyNavigateUp",
+      "KittyNavigateRight",
     },
     keys = {
-      { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
-      { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
-      { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
-      { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
-      { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
+      { "<c-h>", "<cmd><C-U>KittyNavigateLeft<cr>" },
+      { "<c-j>", "<cmd><C-U>KittyNavigateDown<cr>" },
+      { "<c-k>", "<cmd><C-U>KittyNavigateUp<cr>" },
+      { "<c-l>", "<cmd><C-U>KittyNavigateRight<cr>" },
+      { "<c-\\>", "<cmd><C-U>KittyNavigatePrevious<cr>" },
     },
   },
 }
