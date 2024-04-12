@@ -4,8 +4,23 @@ return {
   { "folke/noice.nvim", enabled = false },
   { "Exafunction/codeium.nvim", enabled = false },
   { "nvim-treesitter-context", enabled = false },
+  { "catppuccin/nvim", enabled = false },
+  { "folke/tokyonight.nvim", enabled = false },
 
-  { "Exafunction/codeium.vim" },
+  {
+    "Exafunction/codeium.vim",
+    config = function()
+      vim.g.codeium_no_map_tab = 1
+    end,
+  },
+
+  -- {
+  --   "fatih/vim-go",
+  --   ft = "go",
+  --   keys = {
+  --     { "<leader>j", "<cmd>GoIfErr<cr>" },
+  --   },
+  -- },
 
   -- kanagawa colorscheme
   {
@@ -46,6 +61,13 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
+      checker = {
+        -- automatically check for plugin updates
+        enabled = true,
+        notify = true, -- get a notification when new updates are found
+        frequency = 3600 * 24 * 3, -- check for updates every hour * 24 * 3
+        check_pinned = false, -- check for pinned packages that can't be updated
+      },
       colorscheme = "kanagawa",
     },
   },
