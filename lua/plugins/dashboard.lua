@@ -7,8 +7,6 @@ return {
 
 
 
-
-
 █ █▀█ █▀▀▀▀▀▀ █▀▀▀▀▀█ █▀▀▀▀▀▀ █ █▀█▀▀ █▀▀▀█ ▀▀█▀█▀█▀▀ ▀▀▀▀▀
 █ ▀█▀ █ █▀▀▀█▀█ █▀█ ▀ █ █▀▀ █ █ █ ▀ ▀▀▀ ▀▀▀ ▀▀▀ ▀ ▀▀▀ ▀▀▀▀█
 █ █▀█ ▀ ▀▀▀▀▀ ▀ ▀▀▀▀▀▀▀ ▀▀▀ █ █ █ █▀█▀█▀█▀█▀█ ▀▀█ █▀█ ▀▀▀▀█
@@ -41,6 +39,8 @@ return {
 ▀▀▀▀▀▀▀ ▀▀▀▀▀ ▀▀▀▀▀▀▀ ▀▀▀ ▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀ ▀▀▀ ▀▀▀▀▀▀▀▀▀ ▀▀▀
     ]]
 
+    vim.api.nvim_set_hl(0, "DashboardHeader", { fg = "#458588" })
+
     local opts = {
       theme = "doom",
       hide = {
@@ -53,11 +53,6 @@ return {
         -- stylua: ignore
         center = {
           { action = 'lua require("persistence").load()',                        desc = " Restore Session", icon = " ", key = "s" },
-          { action = "Telescope find_files",                                     desc = " Find file",       icon = " ", key = "f" },
-          { action = "Telescope live_grep",                                      desc = " Find text",       icon = " ", key = "g" },
-          { action = "ene | startinsert",                                        desc = " New file",        icon = " ", key = "n" },
-          { action = "Telescope oldfiles",                                       desc = " Recent files",    icon = " ", key = "r" },
-          { action = "qa",                                                       desc = " Quit",            icon = " ", key = "q" },
         },
         footer = function()
           local stats = require("lazy").stats()
@@ -84,8 +79,5 @@ return {
     end
 
     return opts
-  end,
-  config = function()
-    vim.api.nvim_set_hl(0, "DashboardHeader", { fg = "#458588" })
   end,
 }

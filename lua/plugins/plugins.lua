@@ -4,8 +4,8 @@ return {
   { "folke/noice.nvim", enabled = false },
   { "Exafunction/codeium.nvim", enabled = false },
   { "nvim-treesitter-context", enabled = false },
-  { "catppuccin/nvim", enabled = false },
-  { "folke/tokyonight.nvim", enabled = false },
+
+  { "norcalli/nvim-colorizer.lua" },
 
   {
     "Exafunction/codeium.vim",
@@ -14,46 +14,12 @@ return {
     end,
   },
 
-  -- {
-  --   "fatih/vim-go",
-  --   ft = "go",
-  --   keys = {
-  --     { "<leader>j", "<cmd>GoIfErr<cr>" },
-  --   },
-  -- },
-
-  -- kanagawa colorscheme
   {
-    "rebelot/kanagawa.nvim",
-    opts = {
-      transparent = true,
-      compile = true,
-      colors = {
-        theme = {
-          all = {
-            ui = {
-              bg_gutter = "none",
-            },
-          },
-        },
-      },
-      overrides = function(colors)
-        local theme = colors.theme
-        return {
-          TelescopeTitle = { fg = theme.ui.special, bold = true },
-          TelescopePromptNormal = { bg = theme.ui.bg_p1 },
-          TelescopePromptBorder = { fg = theme.ui.bg_p1, bg = theme.ui.bg_p1 },
-          TelescopeResultsNormal = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m1 },
-          TelescopeResultsBorder = { fg = theme.ui.bg_m1, bg = theme.ui.bg_m1 },
-          TelescopePreviewNormal = { bg = theme.ui.bg_dim },
-          TelescopePreviewBorder = { bg = theme.ui.bg_dim, fg = theme.ui.bg_dim },
-
-          Pmenu = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 }, -- add `blend = vim.o.pumblend` to enable transparency
-          PmenuSel = { fg = "NONE", bg = theme.ui.bg_p2 },
-          PmenuSbar = { bg = theme.ui.bg_m1 },
-          PmenuThumb = { bg = theme.ui.bg_p2 },
-        }
-      end,
+    "mbbill/undotree",
+    lazy = true,
+    cmd = "UndotreeToggle",
+    keys = {
+      { "<leader>uu", "<cmd>UndotreeToggle<cr>", desc = "Undotree" },
     },
   },
 
@@ -125,20 +91,6 @@ return {
       },
     },
   },
-
-  -- imports
-  { import = "lazyvim.plugins.extras.coding.codeium" },
-  { import = "lazyvim.plugins.extras.lang.typescript" },
-  { import = "lazyvim.plugins.extras.lang.json" },
-  { import = "lazyvim.plugins.extras.lang.go" },
-  { import = "lazyvim.plugins.extras.lang.rust" },
-  { import = "lazyvim.plugins.extras.lang.python" },
-  { import = "lazyvim.plugins.extras.lang.omnisharp" },
-  { import = "lazyvim.plugins.extras.lang.docker" },
-  { import = "lazyvim.plugins.extras.lang.markdown" },
-  { import = "lazyvim.plugins.extras.lang.terraform" },
-  { import = "lazyvim.plugins.extras.linting.eslint" },
-  { import = "lazyvim.plugins.extras.formatting.prettier" },
 
   { "ziglang/zig.vim", lazy = true },
 

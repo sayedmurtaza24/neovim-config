@@ -63,3 +63,6 @@ vim.keymap.set("v", "<tab>", function()
     n_times = 2,
   })
 end, { noremap = true })
+
+-- document symbols neotree
+vim.keymap.set({ "n", "v" }, "<leader>ds", "<cmd>Neotree document_symbols <cr>", { desc = "Document Symbols" })
