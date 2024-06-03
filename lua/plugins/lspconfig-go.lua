@@ -5,6 +5,7 @@ return {
       gopls = {
         settings = {
           gopls = {
+            gofumpt = false,
             analyses = {
               fieldalignment = false,
             },
