@@ -8,16 +8,17 @@ return {
     "hrsh7th/cmp-path",
     "windwp/nvim-autopairs",
   },
-
   opts = function()
     vim.api.nvim_set_hl(0, "CmpGhostText", { link = "Comment", default = true })
     local cmp = require("cmp")
     local defaults = require("cmp.config.default")()
+    local auto_select = true
     return {
-      auto_brackets = { "go" },
+      auto_brackets = { "go" }, -- configure any filetype to auto add brackets
       completion = {
-        completeopt = "menu,menuone,noinsert",
+        completeopt = "menu,menuone,noinsert" .. (auto_select and "" or ",noselect"),
       },
+      preselect = auto_select and cmp.PreselectMode.Item or cmp.PreselectMode.None,
       mapping = cmp.mapping.preset.insert({
         ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
         ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
@@ -40,11 +41,10 @@ return {
         { name = "path" },
       }, {
         { name = "buffer" },
-        { name = "luasnip" },
       }),
       formatting = {
         format = function(_, item)
-          local icons = require("lazyvim.config").icons.kinds
+          local icons = LazyVim.config.icons.kinds
           if icons[item.kind] then
             item.kind = icons[item.kind] .. item.kind
           end
@@ -57,11 +57,6 @@ return {
         },
       },
       sorting = defaults.sorting,
-      snippet = {
-        expand = function(args)
-          require("luasnip").lsp_expand(args.body)
-        end,
-      },
     }
   end,
 }

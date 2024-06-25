@@ -31,7 +31,11 @@ return {
     "folke/tokyonight.nvim",
     lazy = false,
     opts = {
-      transparent = false,
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
     },
   },
   {
@@ -113,7 +117,7 @@ return {
     "EdenEast/nightfox.nvim",
     opts = {
       options = {
-        transparent = false,
+        transparent = true,
       },
     },
   }, -- lazy

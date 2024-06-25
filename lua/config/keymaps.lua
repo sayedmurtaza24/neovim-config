@@ -3,9 +3,9 @@
 -- Add any additional keymaps here
 
 -- codeium
-vim.g.codeium_disable_bindings = true
-vim.api.nvim_set_keymap("i", "<A-tab>", "codeium#Accept()", { silent = true, expr = true })
-vim.api.nvim_set_keymap("n", "<A-tab>", "codeium#Chat()", { silent = true, expr = true })
+-- vim.g.codeium_disable_bindings = true
+-- vim.api.nvim_set_keymap("i", "<A-tab>", "codeium#Accept()", { silent = true, expr = true })
+-- vim.api.nvim_set_keymap("n", "<A-tab>", "codeium#Chat()", { silent = true, expr = true })
 
 -- save and quit
 vim.cmd("command! W :w")

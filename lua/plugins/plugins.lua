@@ -8,11 +8,16 @@ return {
   { "norcalli/nvim-colorizer.lua" },
 
   {
-    "Exafunction/codeium.vim",
-    config = function()
-      vim.g.codeium_no_map_tab = 1
-    end,
+    "hudclark/grpc-nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
   },
+
+  -- {
+  --   "Exafunction/codeium.vim",
+  --   config = function()
+  --     vim.g.codeium_no_map_tab = 1
+  --   end,
+  -- },
 
   {
     "mbbill/undotree",
@@ -34,7 +39,7 @@ return {
         frequency = 3600 * 24 * 3, -- check for updates every hour * 24 * 3
         check_pinned = false, -- check for pinned packages that can't be updated
       },
-      colorscheme = "kanagawa",
+      colorscheme = "tokyonight-moon",
     },
   },
 
