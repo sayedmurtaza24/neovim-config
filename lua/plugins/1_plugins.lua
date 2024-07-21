@@ -8,18 +8,6 @@ return {
   { "norcalli/nvim-colorizer.lua" },
 
   {
-    "hudclark/grpc-nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-  },
-
-  -- {
-  --   "Exafunction/codeium.vim",
-  --   config = function()
-  --     vim.g.codeium_no_map_tab = 1
-  --   end,
-  -- },
-
-  {
     "mbbill/undotree",
     lazy = true,
     cmd = "UndotreeToggle",
@@ -34,26 +22,12 @@ return {
     opts = {
       checker = {
         -- automatically check for plugin updates
-        enabled = true,
+        enabled = false,
         notify = true, -- get a notification when new updates are found
         frequency = 3600 * 24 * 3, -- check for updates every hour * 24 * 3
         check_pinned = false, -- check for pinned packages that can't be updated
       },
-      colorscheme = "tokyonight-moon",
-    },
-  },
-
-  {
-    "VidocqH/lsp-lens.nvim",
-    enabled = false,
-    opts = {
-      include_declaration = false,
-      sections = {
-        definition = true,
-        references = true,
-        implements = true,
-        git_authors = true,
-      },
+      colorscheme = "duskfox",
     },
   },
 
@@ -66,47 +40,16 @@ return {
     },
   },
 
-  {
-    "nvim-lualine/lualine.nvim",
-    dependencies = { "arkav/lualine-lsp-progress" },
-    opts = {
-      sections = {
-        lualine_x = {
-          {
-            "lsp_progress",
-            separators = {
-              component = " ",
-              progress = " | ",
-              percentage = { pre = "", post = "%% " },
-              title = { pre = "", post = ": " },
-              lsp_client_name = { pre = "[", post = "]" },
-              spinner = { pre = "", post = "" },
-              message = { commenced = "In Progress", completed = "Completed" },
-            },
-            display_components = { "lsp_client_name", "spinner", { "title", "percentage", "message" } },
-            timer = { progress_enddelay = 500, spinner = 1000, lsp_client_name_enddelay = 1000 },
-            spinner_symbols = { "🌑 ", "🌒 ", "🌓 ", "🌔 ", "🌕 ", "🌖 ", "🌗 ", "🌘 " },
-          },
-          "diff",
-          "encoding",
-        },
-      },
-      options = {
-        theme = "horizon",
-      },
-    },
-  },
-
   { "ziglang/zig.vim", lazy = true },
 
   {
     "echasnovski/mini.comment",
     opts = {
       mappings = {
-        comment = "<leader>/",
-        comment_line = "<leader>/",
-        comment_visual = "<leader>/",
-        textobject = "<leader>/",
+        comment = "gc",
+        comment_line = "gcc",
+        comment_visual = "gc",
+        textobject = "gc",
       },
     },
   },

@@ -1,9 +1,22 @@
 return {
   {
+    "sainnhe/gruvbox-material",
+    config = function()
+      vim.g.gruvbox_material_transparent_background = 1
+      vim.g.gruvbox_material_background = "hard"
+      vim.g.gruvbox_material_better_performance = 1
+      vim.g.gruvbox_material_foreground = "material"
+      vim.g.gruvbox_material_colors_override = {
+        grey1 = { "#555555", "188" },
+      }
+    end,
+  },
+  {
     "ellisonleao/gruvbox.nvim",
     opts = {
       dim_inactive = false,
-      transparent_mode = false,
+      transparent_mode = true,
+      contrast = "hard",
     },
   },
   {
@@ -16,7 +29,7 @@ return {
     enabled = true,
     name = "catppuccin",
     opts = {
-      transparent_background = false,
+      transparent_background = true,
     },
   },
   {
@@ -24,7 +37,7 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-      transparent_bg = false,
+      transparent_bg = true,
     },
   },
   {
@@ -41,7 +54,7 @@ return {
   {
     "AlexvZyl/nordic.nvim",
     opts = {
-      transparent_bg = false,
+      transparent_bg = true,
       telescope = {
         -- Available styles: `classic`, `flat`.
         style = "flat",
@@ -72,18 +85,18 @@ return {
       statementStyle = { bold = true },
       colors = {
         palette = {
-          fujiWhite = "#cfcbbe", -- default foreground
-          springViolet1 = "#cfcbbe", -- light foreground
-          springViolet2 = "#9CABCA", -- brackets, punctuations
-          carpYellow = "#86b0bd", -- identifiers
-          surimiOrange = "#b39279", -- constants, imports, booleans
-          autumnYellow = "#d1b997", -- git change
-          springGreen = "#6db074", -- strings
-          boatYellow2 = "#cfc1a9", -- operators, regex
-          crystalBlue = "#67aad6", -- functions, titles
-          waveAqua2 = "#80ad8b", -- types
-          springBlue = "#b191db", -- builtins, special
-          oniViolet = "#b191db", -- statements, keywords, curlies
+          -- fujiWhite = "#cfcbbe", -- default foreground
+          -- springViolet1 = "#cfcbbe", -- light foreground
+          -- springViolet2 = "#9CABCA", -- brackets, punctuations
+          -- carpYellow = "#86b0bd", -- identifiers
+          -- surimiOrange = "#b39279", -- constants, imports, booleans
+          -- autumnYellow = "#d1b997", -- git change
+          -- springGreen = "#6db074", -- strings
+          -- boatYellow2 = "#cfc1a9", -- operators, regex
+          -- crystalBlue = "#67aad6", -- functions, titles
+          -- waveAqua2 = "#80ad8b", -- types
+          -- springBlue = "#b191db", -- builtins, special
+          -- oniViolet = "#b191db", -- statements, keywords, curlies
         },
         theme = {
           all = {
@@ -118,6 +131,11 @@ return {
     opts = {
       options = {
         transparent = true,
+      },
+      palettes = {
+        all = {
+          yellow = "#ebd2ab",
+        },
       },
     },
   }, -- lazy

@@ -3,6 +3,10 @@ return {
   event = "VimEnter",
   opts = function()
     local logo = [[
+    
+
+
+
 
 
 
@@ -50,9 +54,8 @@ return {
       },
       config = {
         header = vim.split(logo, "\n"),
-        -- stylua: ignore
         center = {
-          { action = 'lua require("persistence").load()',                        desc = " Restore Session", icon = " ", key = "s" },
+          { action = 'lua require("persistence").load()', desc = " Restore Session", icon = " ", key = "s" },
         },
         footer = function()
           local stats = require("lazy").stats()

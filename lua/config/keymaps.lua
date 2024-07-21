@@ -52,17 +52,5 @@ end, { desc = "Toggle Terminal" })
 vim.keymap.set("i", "<C-h>", "<Left>", { desc = "Cursor Left" })
 vim.keymap.set("i", "<C-l>", "<Right>", { desc = "Cursor Right" })
 
-vim.keymap.set("n", "<tab>", function()
-  require("mini.ai").select_textobject("i", "a", {
-    n_times = 1,
-  })
-end, { noremap = true })
-
-vim.keymap.set("v", "<tab>", function()
-  require("mini.ai").select_textobject("i", "a", {
-    n_times = 2,
-  })
-end, { noremap = true })
-
 -- document symbols neotree
 vim.keymap.set({ "n", "v" }, "<leader>ds", "<cmd>Neotree document_symbols <cr>", { desc = "Document Symbols" })
