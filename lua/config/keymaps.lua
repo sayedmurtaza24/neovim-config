@@ -6,6 +6,19 @@
 -- vim.g.codeium_disable_bindings = true
 -- vim.api.nvim_set_keymap("i", "<A-tab>", "codeium#Accept()", { silent = true, expr = true })
 -- vim.api.nvim_set_keymap("n", "<A-tab>", "codeium#Chat()", { silent = true, expr = true })
+--
+-- copilot
+-- vim.keymap.set("i", "<A-tab>", 'copilot#Accept("\\<CR>")', {
+--   expr = true,
+--   replace_keycodes = false,
+-- })
+-- vim.g.copilot_no_tab_map = true
+--
+-- Tabby
+-- vim.keymap.set("i", "<A-tab>", "tabby#Accept()", {
+--   expr = true,
+--   replace_keycodes = false,
+-- })
 
 -- save and quit
 vim.cmd("command! W :w")

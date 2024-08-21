@@ -20,13 +20,6 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      checker = {
-        -- automatically check for plugin updates
-        enabled = false,
-        notify = true, -- get a notification when new updates are found
-        frequency = 3600 * 24 * 3, -- check for updates every hour * 24 * 3
-        check_pinned = false, -- check for pinned packages that can't be updated
-      },
       colorscheme = "duskfox",
     },
   },
