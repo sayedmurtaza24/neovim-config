@@ -1,6 +1,8 @@
 return {
   "proto_lsp",
   dev = true,
+  lazy = true,
+  ft = "proto",
   config = function()
     local lspconfig = require("lspconfig")
     local configs = require("lspconfig.configs")

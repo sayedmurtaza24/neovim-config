@@ -4,6 +4,8 @@ return {
   { "folke/noice.nvim", enabled = false },
   { "Exafunction/codeium.nvim", enabled = false },
   { "nvim-treesitter-context", enabled = false },
+  { "nvim-treesitter-context", enabled = false },
+  { "folke/trouble.nvim", enabled = false },
 
   { "norcalli/nvim-colorizer.lua" },
 
@@ -37,6 +39,7 @@ return {
 
   {
     "echasnovski/mini.comment",
+    lazy = true,
     opts = {
       mappings = {
         comment = "gc",
@@ -49,8 +52,8 @@ return {
 
   {
     "akinsho/toggleterm.nvim",
-    lazy = false,
-    version = "*",
+    lazy = true,
+    cmd = "ToggleTerm",
     opts = {
       size = function(term)
         if term.direction == "float" then
@@ -69,33 +72,34 @@ return {
   },
 
   {
-    "neovim/nvim-lspconfig",
+    "SmiteshP/nvim-navbuddy",
+    cmd = "NavBuddy",
+    lazy = true,
     dependencies = {
-      {
-        "SmiteshP/nvim-navbuddy",
-        dependencies = {
-          "SmiteshP/nvim-navic",
-          "MunifTanjim/nui.nvim",
+      "SmiteshP/nvim-navic",
+      "MunifTanjim/nui.nvim",
+      "neovim/nvim-lspconfig",
+    },
+    keys = {
+      { "<leader>nv", "<cmd>Navbuddy<cr>" },
+    },
+    opts = {
+      lsp = { auto_attach = true },
+      window = {
+        border = "rounded",
+        size = {
+          width = "90%",
+          height = "80%",
         },
-        opts = {
-          lsp = { auto_attach = true },
-          window = {
-            border = "rounded",
-            size = {
-              width = "90%",
-              height = "80%",
-            },
-            sections = {
-              left = {
-                size = "20%",
-              },
-              mid = {
-                size = "35%",
-              },
-              right = {
-                preview = "always",
-              },
-            },
+        sections = {
+          left = {
+            size = "20%",
+          },
+          mid = {
+            size = "35%",
+          },
+          right = {
+            preview = "always",
           },
         },
       },
@@ -109,6 +113,7 @@ return {
 
   {
     "kristijanhusak/vim-dadbod-ui",
+    lazy = true,
     cmd = "DBUI",
     config = function()
       vim.g.db_ui_save_location = "~/.dadbod-ui/queries"

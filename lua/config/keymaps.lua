@@ -53,9 +53,6 @@ vim.keymap.set({ "n", "v" }, "<leader>ca", "<cmd>Telescope quickfix<cr>", { desc
 vim.keymap.set({ "n", "v" }, "gi", "<cmd>Telescope lsp_implementations<cr>", { desc = "LSP Implementations" })
 vim.keymap.set({ "n", "v" }, "<leader>ra", vim.lsp.buf.rename, { desc = "Rename" })
 
--- navbuddy
-vim.keymap.set("n", "<leader>nv", "<cmd>Navbuddy<cr>", { desc = "Navbuddy" })
-
 -- terminal
 vim.keymap.set({ "n", "t" }, "<C-b>", function()
   vim.cmd("ToggleTerm direction=float")

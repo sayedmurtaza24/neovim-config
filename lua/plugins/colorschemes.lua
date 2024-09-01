@@ -1,6 +1,7 @@
 return {
   {
     "sainnhe/gruvbox-material",
+    enabled = false,
     config = function()
       vim.g.gruvbox_material_transparent_background = 1
       vim.g.gruvbox_material_background = "medium"
@@ -13,6 +14,7 @@ return {
   },
   {
     "ellisonleao/gruvbox.nvim",
+    enabled = false,
     opts = {
       dim_inactive = false,
       transparent_mode = true,
@@ -20,13 +22,8 @@ return {
     },
   },
   {
-    "embark-theme/vim",
-    name = "embark",
-  },
-  {
     "catppuccin/nvim",
-    lazy = false,
-    enabled = true,
+    enabled = false,
     name = "catppuccin",
     opts = {
       transparent_background = true,
@@ -34,15 +31,14 @@ return {
   },
   {
     "AlexvZyl/nordic.nvim",
-    lazy = false,
-    priority = 1000,
+    enabled = false,
     opts = {
       transparent_bg = true,
     },
   },
   {
     "folke/tokyonight.nvim",
-    lazy = false,
+    enabled = false,
     opts = {
       transparent = true,
       styles = {
@@ -53,6 +49,7 @@ return {
   },
   {
     "AlexvZyl/nordic.nvim",
+    enabled = false,
     opts = {
       transparent_bg = true,
       telescope = {
@@ -63,6 +60,7 @@ return {
   },
   {
     "rose-pine/neovim",
+    enabled = false,
     name = "rose-pine",
     opts = {
       variant = "main", -- auto, main, moon, or dawn
@@ -77,6 +75,7 @@ return {
   -- kanagawa colorscheme
   {
     "rebelot/kanagawa.nvim",
+    enabled = false,
     opts = {
       transparent = true,
       compiled = false,

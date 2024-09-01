@@ -9,6 +9,8 @@ return {
             analyses = {
               fieldalignment = false,
             },
+            staticcheck = true,
+            vulncheck = "Imports",
           },
         },
       },
